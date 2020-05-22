@@ -31,6 +31,32 @@ $('.owl-categories').owlCarousel({
     }
 })
 
+$('.single .owl-product').owlCarousel({
+    loop:true,
+    margin:30,
+    nav:false,
+    responsive:{
+        0:{
+            items:2,
+            margin: 10
+        },
+        600:{
+            items:3,
+            margin: 10
+        },
+        780:{
+            items:4,
+            margin: 10
+        },
+        1200:{
+            items:4
+        },
+        1600:{
+            items:6
+        }
+    }
+})
+
 $('.owl-news').owlCarousel({
     loop:true,
     margin:30,
@@ -103,3 +129,17 @@ $(function () {
 $(".categories-icon > a").on("click", function() {
   $(".categories").toggleClass("d-none animate__fadeIn animate__animated");
   });
+
+$(".single .categories-icon > a").on("click", function() {
+  $(".single .categories").toggleClass("d-block");
+  });
+
+
+
+new Drift(document.querySelector('.pict'), {
+    paneContainer: document.querySelector('.description'),
+    inlinePane: 900,
+    inlineOffsetY: -85,
+    containInline: true,
+    hoverBoundingBox: true
+});
