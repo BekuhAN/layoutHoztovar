@@ -30,7 +30,7 @@ header
 		transition:all 1s linear
 		&.fix
 			position: fixed
-			width: 100%;
+			width: 100%
 			transition:all .5s linear
 			top: 0
 			z-index: 999
@@ -400,6 +400,9 @@ main
 				align-items: center
 				justify-content: center
 				transition: .2s
+				a
+					color: #555555
+					text-decoration: none
 				i
 					height: 40px
 					width: 40px
@@ -832,7 +835,204 @@ footer
 				border: 1px solid #cccccc
 				cursor: pointer
 				background: #ffffff
+	.grid
+		display: flex
+		flex-wrap: wrap
+		padding-right: 0
+		margin-bottom: 50px
+		+media-breakpoint-down(sm)
+			padding: 0px 10px
+			.col-6
+				padding: 0px 5px
+		.sort
+			border: 1px solid #eeeeee
+			margin-top: 30px
+			height: 40px
+			display: flex
+			justify-content: flex-end
+			align-items: center
+			padding: 0px 20px
+			border-radius: 4px
+			+media-breakpoint-down(lg)
+				font-size: 14px
+			+media-breakpoint-down(sm)
+				margin: 0 -10px
+			span
+				padding-left: 15px
+				transition: .2s
+				&:hover
+					color: $accent
+					cursor: pointer
+	.sidebar
+		padding: 0
+		margin-top: 30px
+		+media-breakpoint-down(sm)
+			padding: 0px 15px
+		&-cat
+			border-radius: 4px
+			border: 1px solid #eeeeee
+			padding: 15px
+			margin-bottom: 30px
+			+media-breakpoint-down(lg)
+				margin-bottom: 10px
+			.title
+				font-size: 22px
+				border-bottom: 1px solid #eeeeee
+				padding-bottom: 10px
+				margin-bottom: 10px
+				+media-breakpoint-down(lg)
+					font-size: 20px
+				+media-breakpoint-down(xs)
+					font-size: 16px
+			&-item
+				padding: 5px 0
+				+media-breakpoint-down(lg)
+					font-size: 14px
+				+media-breakpoint-down(xs)
+					font-size: 12px
+				a
+					color: #555555
+					&:hover
+						color: $accent
+		&-price
+			border-radius: 4px
+			border: 1px solid #eeeeee
+			padding: 15px
+			margin-bottom: 30px
+			+media-breakpoint-down(lg)
+				font-size: 14px
+			+media-breakpoint-down(sm)
+				margin-bottom: 10px
+			+media-breakpoint-down(xs)
+				font-size: 12px
+			.title 
+				font-size: 22px
+				padding-bottom: 20px
+				+media-breakpoint-down(lg)
+					font-size: 20px
+				+media-breakpoint-down(xs)
+					font-size: 16px
+			input
+				height: 40px
+				width: 80px
+				border-radius: 4px
+				border: 1px solid #eeeeee
+				padding: 5px
+	.about
+		.container
+			padding: 0
+			+media-breakpoint-down(xs)
+				padding: 0px 15px
+		.section-title
+			margin: 20px 0
+			a
+				&::before
+					bottom: -14px
+		&-text
+			margin-bottom: 30px
+			+media-breakpoint-down(md)
+				font-size: 12px
+			ul
+				list-style-type: disc
+				padding-left: 30px
 
+.single.new
+	.picture
+		+media-breakpoint-down(md)
+			height: 300px
+		+media-breakpoint-down(sm)
+			margin-bottom: 20px
+		+media-breakpoint-down(xs)
+			height: 200px
+		.pict
+			width: 100%
+			height: auto
+	.description
+		position: relative
+		height: 100%
+		&-info
+			+media-breakpoint-down(md)
+				font-size: 14px
+		.picture-gallery
+			position: absolute
+			width: 100%
+			bottom: 0
+			flex-wrap: wrap
+			+media-breakpoint-down(sm)
+				position: static
+			.gallery-item
+				width: 140px
+				+media-breakpoint-down(xl)
+					width: 120px
+					height: 90px
+				+media-breakpoint-down(lg)
+					width: 100px
+					height: 80px
+				+media-breakpoint-down(md)
+					width: 80px
+					height: 60px
+				+media-breakpoint-down(sm)
+					width: 120px
+					height: 80px
+				+media-breakpoint-down(xs)
+					width: 140px
+					height: 90px
+					margin-bottom: 5px
+				img
+					width: 100%
+					height: auto
+
+body.news
+	#blog
+		.container
+			padding: 0
+			+media-breakpoint-down(md)
+				padding: 0 10px
+			+media-breakpoint-down(md)
+				.col-sm-6
+					padding: 5px
+		.news-item
+			+media-breakpoint-down(md)
+				margin-top: 5px
+
+.smart-basket__alert
+	border-radius: 4px
+	.smart-basket__alert-footer
+		button
+			border-radius: 4px
+			color: #555555
+			transition: .2s
+		.smart-basket__alert-button_close
+			background: #ffffff
+			border: 1px solid #eeeeee
+			&:hover
+				background: $accent
+		.smart-basket__alert-button_by
+			background: $accent
+			&:hover
+				background: #ffffff
+				border: 1px solid #eeeeee
+
+.smart-basket
+	background: rgba(0,0,0,0.8) !important
+.smart-basket__form
+	margin: auto !important
+	background: #ffffff
+	.smart-basket__product-id
+		visibility: hidden
+	button
+		color: #555555
+	.smart-basket__close-form
+		background: #ffffff
+		border: 1px solid #eeeeee
+		&:hover
+			background: $accent
+	.smart-basket__send-form
+		background: $accent
+		&:hover
+			background: #ffffff
+			border: 1px solid #eeeeee
+	
 /*==========  user style  ==========*/
 
 @import "media" // Always at the end

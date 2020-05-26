@@ -11,8 +11,8 @@
 
 		// *** /SMTP *** //
    
-    const SENDER = 'bekuhan@yandex.ru';
-    const CATCHER = 'sozvezdie-pizza@yandex.ru';
+    const SENDER = 'your-mail@yandex.ru';
+    const CATCHER = 'info@yandex.ru';
     const SUBJECT = 'Заявка с сайта';
     const CHARSET = 'UTF-8';
     

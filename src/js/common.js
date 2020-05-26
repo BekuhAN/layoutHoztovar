@@ -134,7 +134,14 @@ $(".single .categories-icon > a").on("click", function() {
   $(".single .categories").toggleClass("d-block");
   });
 
+$(".gallery-item img").on("click", function() {
+  $(".pict").attr("src", $(this).attr("src"));
+  $(".pict").attr("data-zoom", $(this).attr("src"));
+  });
 
+$(".sort span").on("click", function() {
+  $(this).children('i').toggleClass('fa-angle-up fa-angle-down');
+  });
 
 new Drift(document.querySelector('.pict'), {
     paneContainer: document.querySelector('.description'),
@@ -143,3 +150,24 @@ new Drift(document.querySelector('.pict'), {
     containInline: true,
     hoverBoundingBox: true
 });
+
+function getForm(){
+    	var subEmail = $('#subEmail').val();
+	  $.ajax({
+	    type: "POST",
+	    url: '/src/php/subscribe.php',
+	    data: {subEmail:subEmail},
+	    success: function(){
+	      alert('Сообщение отправлено');
+	    },
+	    error: function(e){
+	    	alert('Что то пошло не так');
+	    }
+	  });
+	  
+	  $(':input','#main') 
+		.not(':button, :submit, :reset, :hidden') 
+		.val('') 
+		.removeAttr('checked') 
+		.removeAttr('selected'); 
+	};
